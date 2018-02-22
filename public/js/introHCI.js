@@ -8,6 +8,12 @@ $(document).ready(function() {
 /*
  * Function that is called when the document is ready.
  */
-function initializePage() {
-	// your code here
+
+
+$('.likeBtn').click(initializePage);
+$('.btn btn-default likeBtn').click(initializePage);
+
+function initializePage(event) {
+	console.log('like button clicked');
+	ga('send', 'event', 'like', 'click');
 }
